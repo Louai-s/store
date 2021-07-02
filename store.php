@@ -36,19 +36,24 @@
 
         </div>
     </header>
+    <nav class="secondary-nav nav">
+        <ul>
+            <li><button id="ShowBtn" onclick="show()" value="Show Recommended Items">Show Recommended Items</button></li>
+            <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces()" value="item1">Prev Lists 1</button>
+            <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces2()" value="item2">Prev Lists 2</button>
+        </ul>
+    </nav>
+
     <br>
     <br>
     <div class="list">
         <input type="text" class="addItemInput"> &nbsp
         <button class="btn btn-primary list-item-button"> Add Item </button> &nbsp&nbsp
-        <button id="ShowBtn" onclick="show()" value="Show Recommended Items">Show Recommended Items</button>
-        <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces()" value="item1">Prev Lists 1</button>
-        <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces2()" value="item2">Prev Lists 2</button>
         <ul>
         </ul>
     </div>
     <div id="prevtitle">
-        <h3>Prev Items:</h3>
+        <h3>Previous Purchased Items:</h3>
         <div id="table-container">
 
         </div>
