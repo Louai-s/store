@@ -242,7 +242,7 @@ body {
 }
 
 .cart-item {
-    width: 45%;
+    width: 50%;
 }
 
 .cart-price {
@@ -252,7 +252,7 @@ body {
 }
 
 .cart-quantity {
-    width: 35%;
+    width: 50%;
 }
 
 .cart-item-title {
@@ -403,6 +403,7 @@ footer {
     padding: 6px 12px;
     cursor: pointer;
     font-size: 14px;
+    margin-top: 20px;
 }
 
 .list-item-button {
@@ -410,7 +411,7 @@ footer {
 }
 
 .show-prev {
-    padding: .67em .67em;
+    margin-top: 20px;
     color: black
 }
 
@@ -418,7 +419,7 @@ footer {
     padding: 3px 12px;
 }
 
-#prevtitle h2 {
+#prevtitle h3 {
     padding-left: 50px;
     text-align: center;
 }
@@ -438,4 +439,14 @@ footer {
     width: 50%;
     float: left;
     padding: 20px;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
+hr.solid2 {
+    border-top: 3px solid #bbb;
+    margin-left: 500px;
+    margin-right: 500px;
 }
