@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload="viewPrevPurchaces3();">
     <div class="alert alert-success alert-dismissible" id="success" style="display:none;">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
     </div>
@@ -38,7 +38,6 @@
     </header>
     <br>
     <br>
-    <div id="table-container"></div>
     <div class="list">
         <input type="text" class="addItemInput"> &nbsp
         <button class="btn btn-primary list-item-button"> Add Item </button> &nbsp&nbsp
@@ -48,11 +47,15 @@
         <ul>
         </ul>
     </div>
-    <section class="container content-section">
+    <div id="prevtitle">
+        <h3>Prev Items:</h3>
+        <div id="table-container">
 
+        </div>
+    </div>
+    <section class="container content-section">
         <div id="RecommendedItems">
             <h2 class="section-header">Recommended Items
-
             </h2>
             <div class="shop-items">
                 <div class="shop-item">
