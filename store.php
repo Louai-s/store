@@ -43,7 +43,8 @@
         <input type="text" class="addItemInput"> &nbsp
         <button class="btn btn-primary list-item-button"> Add Item </button> &nbsp&nbsp
         <button id="ShowBtn" onclick="show()" value="Show Recommended Items">Show Recommended Items</button>
-        <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces()" value="Show prev Items">Prev Lists</button>
+        <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces()" value="item1">Prev Lists 1</button>
+        <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces2()" value="item2">Prev Lists 2</button>
         <ul>
         </ul>
     </div>
