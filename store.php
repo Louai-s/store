@@ -39,23 +39,29 @@
     <nav class="secondary-nav nav">
         <ul>
             <li><button id="ShowBtn" onclick="show()" value="Show Recommended Items">Show Recommended Items</button></li>
-            <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces()" value="item1">Prev Lists 1</button>
-            <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces2()" value="item2">Prev Lists 2</button>
+            <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces()" value="item1">Previous Lists 1</button>
+            <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces2()" value="item2">Previous Lists 2</button>
         </ul>
     </nav>
 
-    <br>
-    <br>
-    <div class="list">
-        <input type="text" class="addItemInput"> &nbsp
-        <button class="btn btn-primary list-item-button"> Add Item </button> &nbsp&nbsp
-        <ul>
-        </ul>
-    </div>
-    <div id="prevtitle">
-        <h3>Previous Purchased Items:</h3>
-        <div id="table-container">
 
+    <div class="float-container">
+        <div class="float-child">
+            <div id="prevtitle">
+                <h2>Previous Purchased Items:</h2>
+                <div id="table-container">
+                </div>
+            </div>
+        </div>
+        <div class="float-child">
+            <div class="list">
+                <h2>Type Items To Add:</h2>
+                <input type="text" class="addItemInput" placeholder="Typing.."> &nbsp
+                <button class="btn btn-primary list-item-button"> Add Item </button> &nbsp&nbsp
+                <button class="btn btn-danger" type="button" onclick="MakeNewList()" style="background-color: red;color: white;">Make a new List</button> <br> <br>
+                <ul>
+                </ul>
+            </div>
         </div>
     </div>
     <section class="container content-section">
@@ -100,7 +106,7 @@
     <section class="container content-section">
         <br>
         <h2 class="section-header">List</h2>
-        <button id="ShowBtn1" type="button" onclick="MakeNewList()" style="background-color: red;color: white;">Make a new List</button> <br> <br>
+
 
         <div class="cart-row">
             <span class="cart-item cart-header cart-column">ITEM</span>
