@@ -43,19 +43,18 @@
             <button class="btn btn-secondary show-prev" onclick="viewPrevPurchaces2()" value="item2">Previous Lists 2</button>
         </ul>
     </nav>
-
-
+    <hr class="solid">
     <div class="float-container">
         <div class="float-child">
             <div id="prevtitle">
-                <h2>Previous Purchased Items:</h2>
+                <h3>Previous Purchased Items:</h3>
                 <div id="table-container">
                 </div>
             </div>
         </div>
         <div class="float-child">
             <div class="list">
-                <h2>Type Items To Add:</h2>
+                <h3>Type Items To Add:</h3>
                 <input type="text" class="addItemInput" placeholder="Typing.."> &nbsp
                 <button class="btn btn-primary list-item-button"> Add Item </button> &nbsp&nbsp
                 <button class="btn btn-danger" type="button" onclick="MakeNewList()" style="background-color: red;color: white;">Make a new List</button> <br> <br>
@@ -103,11 +102,8 @@
             </div>
         </div>
     </section>
+    <br><br>
     <section class="container content-section">
-        <br>
-        <h2 class="section-header">List</h2>
-
-
         <div class="cart-row">
             <span class="cart-item cart-header cart-column">ITEM</span>
             <span class="cart-quantity cart-header cart-column">QUANTITY</span>
