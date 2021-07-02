@@ -136,42 +136,58 @@ function deleteDataFromDB(title) {
 }
 
 function viewPrevPurchaces() {
-    $.ajax({
-        url: "view_ajax.php",
-        type: "POST",
-        cache: false,
-        success: function (data) {
-            alert(data);
-            var dataSplit = data.split(' ');
-            dataSplit.pop();
-            $.each(dataSplit, function (index) {
-                addItemToCart(dataSplit[index]);
-                console.log(dataSplit[index]);
+    $(document).ready(function () {
+        $.ajax({
+            url: "view_ajax.php",
+            type: "POST",
+            cache: false,
+            success: function (data) {
+                alert(data);
+                var dataSplit = data.split(' ');
+                dataSplit.pop();
+                $.each(dataSplit, function (index) {
+                    addItemToCart(dataSplit[index]);
+                    console.log(dataSplit[index]);
 
-            });
+                });
 
-        }
+            }
 
+        });
     });
 }
 function viewPrevPurchaces2() {
+    $(document).ready(function () {
+        $.ajax({
+            url: "view_ajax2.php",
+            type: "POST",
+            cache: false,
+            success: function (data) {
+                alert(data);
+                var dataSplit = data.split(' ');
+                dataSplit.pop();
+                $.each(dataSplit, function (index) {
+                    addItemToCart(dataSplit[index]);
+
+                });
+
+            }
+
+        });
+    });
+}
+
+function viewPrevPurchaces3() {
     $.ajax({
-        url: "view_ajax2.php",
+        url: "view_ajax3.php",
         type: "POST",
         cache: false,
         success: function (data) {
-            alert(data);
-            var dataSplit = data.split(' ');
-            dataSplit.pop();
-            $.each(dataSplit, function (index) {
-                addItemToCart(dataSplit[index]);
-
-            });
-
+            $('#table-container').html(data);
         }
-
     });
 }
+
 
 
 function quantityChanged(event) {
