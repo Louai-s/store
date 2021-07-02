@@ -405,19 +405,37 @@ footer {
     font-size: 14px;
 }
 
+.list-item-button {
+    padding: 6px 12px;
+}
+
 .show-prev {
     padding: .67em .67em;
     color: black
 }
 
-#prevtitle h3 {
+.addItemInput {
+    padding: 3px 12px;
+}
+
+#prevtitle h2 {
     padding-left: 50px;
-    color: black;
-    font-weight: bold;
+    text-align: center;
 }
 
 #table-container {
-    color: black;
     font-size: 20px;
     padding-left: 50px;
+    text-align: center;
+}
+
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
 }
