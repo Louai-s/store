@@ -27,12 +27,12 @@
     <div class="titlepic2">
         <div id="SignIN">
             <?php
-            if (!isset($_SESSION['username'])) { //test if we have a login username
+            if (!isset($_SESSION['Email'])) { //test if we have a login username
 
             ?>
                 <b>Login</b>
                 <form method="post" action="Connect.php">
-                    <input type="text" name="username" required>
+                    <input type="text" name="Email" required>
                     <br><br><br>
                     <input type="password" name="password" required>
                     <br><br><br>
