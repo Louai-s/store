@@ -66,7 +66,6 @@ function PurchaseClicked1(event) {
         shopItem.getElementsByClassName("cart-item-title")[0].style.backgroundColor = "lightgreen";
         shopItem.getElementsByClassName("btn-danger")[0].style.display = "none";
         shopItem.getElementsByClassName("cart-quantity-input")[0].readOnly = true;
-        updateDataBase(title, qty)
 
     } else {
         shopItem.getElementsByClassName('btn-success')[0].innerHTML = 'PURCHASE'
@@ -75,6 +74,18 @@ function PurchaseClicked1(event) {
         shopItem.getElementsByClassName("cart-quantity-input")[0].readOnly = false;
     }
 }
+
+
+function saveToDB(event) {
+    var button = event.target
+    var shopItem = button.parentElement.parentElement
+    var qty = shopItem.getElementsByClassName('cart-quantity-input')[0].value
+    var title = shopItem.getElementsByClassName('cart-item-title')[0].innerText
+    updateDataBase(title, qty)
+}
+
+
+
 function updateDataBase(title, qty) {
     $(document).ready(function () {
         if (title != "" && qty != "") {
@@ -132,8 +143,10 @@ function viewPrevPurchaces() {
         success: function (data) {
             alert(data);
             var dataSplit = data.split(' ');
+            dataSplit.pop();
             $.each(dataSplit, function (index) {
                 addItemToCart(dataSplit[index]);
+                console.log(dataSplit[index]);
 
             });
 
@@ -149,6 +162,7 @@ function viewPrevPurchaces2() {
         success: function (data) {
             alert(data);
             var dataSplit = data.split(' ');
+            dataSplit.pop();
             $.each(dataSplit, function (index) {
                 addItemToCart(dataSplit[index]);
 
@@ -222,10 +236,13 @@ function addItemToCart(title) {
             <button class="btn btn-danger" type="button">REMOVE</button>
             &nbsp;&nbsp;&nbsp;
             <button class="btn btn-success" type="button">PURCHASE</button>
+            &nbsp;&nbsp;&nbsp;
+            <button class="btn btn-secondary" type="button">Save To DB</button>
         </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('btn-secondary')[0].addEventListener('click', saveToDB)
     cartRow.getElementsByClassName('btn-success')[0].addEventListener('click', PurchaseClicked1)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
