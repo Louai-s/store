@@ -26,8 +26,10 @@
         ?>
         <div id="login">
             <?php
-            if (isset($_SESSION['username'])) { //test if we have a login username
-                print "Hello, " . $_SESSION["FN"] . " " . $_SESSION["LN"];
+            if (isset($_SESSION['Email'])) { //test if we have a login username
+                print "Hello, " . $_SESSION["Email"] ;
+                echo "<br>";
+                print "Welcome to our Store";
             ?>
                 <a href="logout.php"><br>Logout</a>
             <?php
