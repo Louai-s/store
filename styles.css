@@ -445,8 +445,7 @@ hr.solid {
     border-top: 3px solid #bbb;
 }
 
-hr.solid2 {
-    border-top: 3px solid #bbb;
-    margin-left: 500px;
-    margin-right: 500px;
+.spacer {
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
