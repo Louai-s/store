@@ -38,9 +38,9 @@
                 die("Connection failed: " . $conn->connect_error); //the result if we dont have connection to database
             }
             //if he did press on update to make an update of products 
-            print "Please insert the id and the new password:<br><br>"
+            print "Please insert the Email and the new password:<br><br>"
             ?>
-            Id:  &nbsp;&nbsp; &nbsp; &nbsp;<input type="text" name="Id" required><br><br>
+            Email:  &nbsp;&nbsp; &nbsp; &nbsp;<input type="text" name="Email" required><br><br>
             New Pass &nbsp;<input type="number" name="pass" min="1" required><br><br><br>
             <button type="submit" name="done" value="1">Done</button>
     </div>
@@ -49,19 +49,19 @@
 
         if ($_POST["done"] == 1) { //if he did click on update item to update the item
             $Password = $_POST["pass"];
-            $id = $_POST["Id"];
-            $sql = "SELECT FirstName,Id,Password FROM client WHERE Id='$id'";
+            $Email = $_POST["Email"];
+            $sql = "SELECT Email,Password FROM client WHERE Email='$Email'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) { //if the item exist in the database to update him
-                    print "<br><b>FirstName</b>: " . $row["FirstName"] . " <b>Id</b>: " . $row["Id"] . "<b> Password</b>: " . $row["Password"] . "<br>";
+                    print " <b>Email</b>: " . $row["Email"] . "<b> Password</b>: " . $row["Password"] . "<br>";
                 }
-                $sql = "UPDATE client SET Password='$Password' WHERE Id='$id'";
+                $sql = "UPDATE client SET Password='$Password' WHERE Email='$Email'";
                 $result = $conn->query($sql); //upated to new quintity
 
                 print "<br>password updated to " . $Password . "<br>";
-            } else { //if he pressed an id doesnt exist in the databae
+            } else { //if he pressed an id doesnt exist in the database
                 print "<br>There is a problem!! Try again with another id!!";
             }
         }
