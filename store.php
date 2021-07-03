@@ -63,10 +63,10 @@
             </div>
         </div>
     </div>
+    <div class = spacer></div>
     <section class="container content-section">
         <div id="RecommendedItems">
-            <h2 class="section-header">Recommended Items
-            </h2>
+            <h2 class="section-header">Recommended Items</h2>
             <div class="shop-items">
                 <div class="shop-item">
                     <span class="shop-item-title">Nescafi</span>
